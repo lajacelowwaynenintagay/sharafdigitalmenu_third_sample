@@ -120,7 +120,16 @@ export function SmartMenuPage() {
         setMenuData(data);
         setLang((safeStorageGet(STORAGE_KEYS.lang) as MenuLanguage | null) ?? data.settings.default_language);
         setCurrency(safeStorageGet(STORAGE_KEYS.currency) ?? data.settings.currency);
-        setCurrentCategory(data.categories[0]?.id ?? null);
+        
+        let savedCat = null;
+        if (typeof window !== "undefined") {
+          savedCat = window.sessionStorage.getItem("active_category");
+        }
+        if (savedCat && data.categories.some(c => c.id === savedCat)) {
+          setCurrentCategory(savedCat);
+        } else {
+          setCurrentCategory(data.categories[0]?.id ?? null);
+        }
 
         const storedTheme = safeStorageGet(STORAGE_KEYS.theme) as ThemeMode | null;
         if (!storedTheme) {
@@ -295,6 +304,9 @@ export function SmartMenuPage() {
     
     setSearchText("");
     setCurrentCategory(id);
+    if (typeof window !== "undefined") {
+      window.sessionStorage.setItem("active_category", id);
+    }
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
