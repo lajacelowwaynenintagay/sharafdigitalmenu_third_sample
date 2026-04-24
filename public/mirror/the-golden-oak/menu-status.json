@@ -1,0 +1,66 @@
+{
+  "bavarian_classic_german_dish": {
+    "badges": [
+      "SPECIAL"
+    ],
+    "offer": 10
+  },
+  "bbq_bacon_cheeseburger": {
+    "badges": [
+      "SPICY2"
+    ]
+  },
+  "bbq_chicken_pizza_delight": {
+    "badges": [
+      "SPICY3"
+    ]
+  },
+  "burrata_with_prosciutto": {
+    "offer": 0,
+    "price": 34,
+    "stock": "available"
+  },
+  "chocolate_milkshake": {
+    "badges": [
+      "SPICY1"
+    ]
+  },
+  "gourmet_truffle_dumplings": {
+    "offer": 0,
+    "price": 32,
+    "stock": "available"
+  },
+  "latte_art_blend": {
+    "offer": 10
+  },
+  "lobster_thermidor": {
+    "badges": [
+      "SPECIAL"
+    ]
+  },
+  "mediterranean_mezze": {
+    "badges": [
+      "HOT"
+    ]
+  },
+  "palak_paneer_and_garlic_naan": {
+    "badges": [
+      "SPECIAL"
+    ]
+  },
+  "refreshing_mojito": {
+    "badges": [
+      "SPICY1"
+    ],
+    "offer": 10
+  },
+  "spicy_southwest_burger": {
+    "offer": 10
+  },
+  "tuna_tartare_crostini": {
+    "badges": [
+      "SPICY3"
+    ],
+    "offer": 10
+  }
+}

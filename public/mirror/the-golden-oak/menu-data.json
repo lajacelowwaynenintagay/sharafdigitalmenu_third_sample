@@ -1,0 +1,3063 @@
+{
+  "settings": {
+    "restaurant_name": "The Golden Oak",
+    "currency": "$",
+    "default_language": "en",
+    "theme_auto": false
+  },
+  "categories": [
+    {
+      "id": "starters",
+      "icon": "fa-utensils",
+      "name": {
+        "en": "Starters",
+        "de": "Vorspeisen",
+        "fr": "Entrées",
+        "ar": "مقبلات"
+      }
+    },
+    {
+      "id": "main_course",
+      "icon": "fa-plate-wheat",
+      "name": {
+        "en": "Main Course",
+        "de": "Hauptgang",
+        "fr": "Plat principal",
+        "ar": "الطبق الرئيسي"
+      }
+    },
+    {
+      "id": "burgers",
+      "icon": "fa-burger",
+      "name": {
+        "en": "Burgers",
+        "de": "Burger",
+        "fr": "Burgers",
+        "ar": "برغر"
+      }
+    },
+    {
+      "id": "salads",
+      "icon": "fa-carrot",
+      "name": {
+        "en": "Salads",
+        "de": "Salate",
+        "fr": "Salades",
+        "ar": "سلطات"
+      }
+    },
+    {
+      "id": "desserts",
+      "icon": "fa-ice-cream",
+      "name": {
+        "en": "Desserts",
+        "de": "Nachspeisen",
+        "fr": "Desserts",
+        "ar": "حلويات"
+      }
+    },
+    {
+      "id": "seafood",
+      "icon": "fa-fish",
+      "name": {
+        "en": "Seafood",
+        "de": "Meeresfrüchte",
+        "fr": "Fruits de mer",
+        "ar": "مأكولات بحرية"
+      }
+    },
+    {
+      "id": "coffee",
+      "icon": "fa-coffee",
+      "name": {
+        "en": "Coffee",
+        "de": "Kaffee",
+        "fr": "Café",
+        "ar": "قهوة"
+      }
+    },
+    {
+      "id": "beverages",
+      "icon": "fa-glass-water",
+      "name": {
+        "en": "Beverages",
+        "de": "Getränke",
+        "fr": "Boissons",
+        "ar": "مشروبات"
+      }
+    },
+    {
+      "id": "chef_specials",
+      "icon": "fa-star",
+      "name": {
+        "en": "Chef Specials",
+        "de": "Spezialitäten",
+        "fr": "Spécialités",
+        "ar": "توصيات الشيف"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "burrata_with_prosciutto",
+      "category": "starters",
+      "price": 34,
+      "calories": "420",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Burrata With Prosciutto",
+        "de": "Burrata mit Prosciutto",
+        "fr": "Burrata au Prosciutto",
+        "ar": "بوراتا مع بروسكيوتو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Burrata",
+            "de": "Burrata",
+            "fr": "Burrata",
+            "ar": "بوراتا"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Prosciutto",
+            "de": "Prosciutto",
+            "fr": "Prosciutto",
+            "ar": "بروسكيوتو"
+          },
+          "c": "#FF9A8A"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Olive Oil",
+            "de": "Olivenöl",
+            "fr": "Huile d’olive",
+            "ar": "زيت زيتون"
+          },
+          "c": "#E6C84F"
+        },
+        {
+          "n": {
+            "en": "Basil",
+            "de": "Basilikum",
+            "fr": "Basilic",
+            "ar": "ريحان"
+          },
+          "c": "#5ED18A"
+        }
+      ],
+      "formatted_price": "$ 34.00",
+      "image": "/mirror/the-golden-oak/images/burrata_with_prosciutto.png"
+    },
+    {
+      "id": "gourmet_truffle_dumplings",
+      "category": "starters",
+      "price": 32,
+      "calories": "380",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Gourmet Truffle Dumplings",
+        "de": "Trüffel Dumplings",
+        "fr": "Raviolis à la Truffe",
+        "ar": "دامبلينغ بالكمأة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Dumpling",
+            "de": "Teigtasche",
+            "fr": "Ravioli",
+            "ar": "دامبلينغ"
+          },
+          "c": "#d946ef"
+        },
+        {
+          "n": {
+            "en": "Truffle",
+            "de": "Trüffel",
+            "fr": "Truffe",
+            "ar": "كمأة"
+          },
+          "c": "#C8B6A6"
+        },
+        {
+          "n": {
+            "en": "Mushroom",
+            "de": "Pilz",
+            "fr": "Champignon",
+            "ar": "فطر"
+          },
+          "c": "#D9B38C"
+        },
+        {
+          "n": {
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "ar": "جبن"
+          },
+          "c": "#FFE08A"
+        },
+        {
+          "n": {
+            "en": "Chives",
+            "de": "Schnittlauch",
+            "fr": "Ciboulette",
+            "ar": "ثوم معمر"
+          },
+          "c": "#6EDC8F"
+        }
+      ],
+      "formatted_price": "$ 32.00",
+      "image": "/mirror/the-golden-oak/images/gourmet_truffle_dumplings.png"
+    },
+    {
+      "id": "lobster_thermidor",
+      "category": "starters",
+      "type": "non-veg",
+      "is_4d": false,
+      "price": 58,
+      "calories": "520",
+      "title": {
+        "en": "Lobster Thermidor",
+        "de": "Hummer Thermidor",
+        "fr": "Homard Thermidor",
+        "ar": "لوبستر ثيرميدور"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Lobster",
+            "de": "Hummer",
+            "fr": "Homard",
+            "ar": "لوبستر"
+          },
+          "c": "#10b981"
+        },
+        {
+          "n": {
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "ar": "جبن"
+          },
+          "c": "#ffd36a"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#fff1d6"
+        },
+        {
+          "n": {
+            "en": "Mustard",
+            "de": "Senf",
+            "fr": "Moutarde",
+            "ar": "خردل"
+          },
+          "c": "#f4d35e"
+        },
+        {
+          "n": {
+            "en": "Parsley",
+            "de": "Petersilie",
+            "fr": "Persil",
+            "ar": "بقدونس"
+          },
+          "c": "#5fd08c"
+        }
+      ],
+      "formatted_price": "$ 58.00",
+      "image": "/mirror/the-golden-oak/images/lobster_thermidor.png"
+    },
+    {
+      "id": "mediterranean_mezze",
+      "category": "starters",
+      "price": 29,
+      "calories": "450",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Mediterranean Mezze",
+        "de": "Mediterrane Mezze",
+        "fr": "Mezze Méditerranéen",
+        "ar": "مقبلات متوسطية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Hummus",
+            "de": "Hummus",
+            "fr": "Houmous",
+            "ar": "حمص"
+          },
+          "c": "#f59e0b"
+        },
+        {
+          "n": {
+            "en": "Olive",
+            "de": "Olive",
+            "fr": "Olive",
+            "ar": "زيتون"
+          },
+          "c": "#C2A36B"
+        },
+        {
+          "n": {
+            "en": "Pita Bread",
+            "de": "Pitabrot",
+            "fr": "Pain pita",
+            "ar": "خبز بيتا"
+          },
+          "c": "#F4C27A"
+        },
+        {
+          "n": {
+            "en": "Pepper",
+            "de": "Paprika",
+            "fr": "Poivron",
+            "ar": "فلفل"
+          },
+          "c": "#FF7A70"
+        },
+        {
+          "n": {
+            "en": "Yogurt",
+            "de": "Joghurt",
+            "fr": "Yaourt",
+            "ar": "زبادي"
+          },
+          "c": "#FFF4E0"
+        }
+      ],
+      "formatted_price": "$ 29.00",
+      "image": "/mirror/the-golden-oak/images/mediterranean_mezze.png"
+    },
+    {
+      "id": "oysters_on_ice",
+      "category": "starters",
+      "price": 42,
+      "calories": "210",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Oysters On Ice",
+        "de": "Austern auf Eis",
+        "fr": "Huîtres sur Glace",
+        "ar": "محار على الثلج"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Oysters",
+            "de": "Austern",
+            "fr": "Huîtres",
+            "ar": "محار"
+          },
+          "c": "#f59e0b"
+        },
+        {
+          "n": {
+            "en": "Lemon",
+            "de": "Zitrone",
+            "fr": "Citron",
+            "ar": "ليمون"
+          },
+          "c": "#FFE066"
+        },
+        {
+          "n": {
+            "en": "Ice",
+            "de": "Eis",
+            "fr": "Glace",
+            "ar": "ثلج"
+          },
+          "c": "#DFF6FF"
+        },
+        {
+          "n": {
+            "en": "Vinegar",
+            "de": "Essig",
+            "fr": "Vinaigre",
+            "ar": "خل"
+          },
+          "c": "#F6E7C1"
+        },
+        {
+          "n": {
+            "en": "Parsley",
+            "de": "Petersilie",
+            "fr": "Persil",
+            "ar": "بقدونس"
+          },
+          "c": "#5FD08C"
+        }
+      ],
+      "formatted_price": "$ 42.00",
+      "image": "/mirror/the-golden-oak/images/oysters_on_ice.png"
+    },
+    {
+      "id": "tuna_tartare_crostini",
+      "category": "starters",
+      "price": 36,
+      "calories": "340",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Tuna Tartare Crostini",
+        "de": "Thunfisch Tatar Crostini",
+        "fr": "Crostini au Tartare de Thon",
+        "ar": "كروستيني تارتار التونة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Tuna",
+            "de": "Thunfisch",
+            "fr": "Thon",
+            "ar": "تونة"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Bread",
+            "de": "Brot",
+            "fr": "Pain",
+            "ar": "خبز"
+          },
+          "c": "#F4C27A"
+        },
+        {
+          "n": {
+            "en": "Avocado",
+            "de": "Avocado",
+            "fr": "Avocat",
+            "ar": "أفوكادو"
+          },
+          "c": "#8FE3A1"
+        },
+        {
+          "n": {
+            "en": "Capers",
+            "de": "Kapern",
+            "fr": "Câpres",
+            "ar": "كبر"
+          },
+          "c": "#B8D8A3"
+        },
+        {
+          "n": {
+            "en": "Lemon",
+            "de": "Zitrone",
+            "fr": "Citron",
+            "ar": "ليمون"
+          },
+          "c": "#FFE066"
+        }
+      ],
+      "formatted_price": "$ 36.00",
+      "image": "/mirror/the-golden-oak/images/tuna_tartare_crostini.png"
+    },
+    {
+      "id": "tuna_tartare_wonton",
+      "category": "starters",
+      "price": 35,
+      "calories": "360",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Tuna Tartare Wonton",
+        "de": "Thunfisch Tatar Wonton",
+        "fr": "Wonton au Tartare de Thon",
+        "ar": "وانتون تارتار التونة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Tuna",
+            "de": "Thunfisch",
+            "fr": "Thon",
+            "ar": "تونة"
+          },
+          "c": "#f43f5e"
+        },
+        {
+          "n": {
+            "en": "Wonton",
+            "de": "Wonton",
+            "fr": "Wonton",
+            "ar": "وانتون"
+          },
+          "c": "#F6C77A"
+        },
+        {
+          "n": {
+            "en": "Sesame Oil",
+            "de": "Sesamöl",
+            "fr": "Huile de sésame",
+            "ar": "زيت سمسم"
+          },
+          "c": "#F2C572"
+        },
+        {
+          "n": {
+            "en": "Scallion",
+            "de": "Frühlingszwiebel",
+            "fr": "Oignon vert",
+            "ar": "بصل أخضر"
+          },
+          "c": "#6EDC8F"
+        },
+        {
+          "n": {
+            "en": "Soy Sauce",
+            "de": "Sojasauce",
+            "fr": "Sauce soja",
+            "ar": "صلصة صويا"
+          },
+          "c": "#E0B089"
+        }
+      ],
+      "formatted_price": "$ 35.00",
+      "image": "/mirror/the-golden-oak/images/tuna_tartare_wonton.png"
+    },
+    {
+      "id": "bbq_chicken_pizza_delight",
+      "category": "main_course",
+      "price": 27,
+      "calories": "550",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Bbq Chicken Pizza Delight",
+        "de": "BBQ Hähnchen Pizza",
+        "fr": "Pizza Poulet BBQ",
+        "ar": "بيتزا دجاج باربكيو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chicken",
+            "de": "Hähnchen",
+            "fr": "Poulet",
+            "ar": "دجاج"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Mozzarella",
+            "de": "Mozzarella",
+            "fr": "Mozzarella",
+            "ar": "موزاريلا"
+          },
+          "c": "#FFE066"
+        },
+        {
+          "n": {
+            "en": "BBQ Sauce",
+            "de": "BBQ Soße",
+            "fr": "Sauce BBQ",
+            "ar": "صلصة باربكيو"
+          },
+          "c": "#FF8A65"
+        },
+        {
+          "n": {
+            "en": "Onion",
+            "de": "Zwiebel",
+            "fr": "Oignon",
+            "ar": "بصل"
+          },
+          "c": "#D291FF"
+        },
+        {
+          "n": {
+            "en": "Dough",
+            "de": "Teig",
+            "fr": "Pâte",
+            "ar": "عجينة"
+          },
+          "c": "#F4C27A"
+        }
+      ],
+      "formatted_price": "$ 27.00",
+      "image": "/mirror/the-golden-oak/images/bbq_chicken_pizza_delight.png"
+    },
+    {
+      "id": "hawaiian_supreme",
+      "category": "main_course",
+      "price": 28,
+      "calories": "570",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Hawaiian Supreme",
+        "de": "Hawaii Supreme Pizza",
+        "fr": "Pizza Hawaï Suprême",
+        "ar": "بيتزا هاواي سوبريم"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Ham",
+            "de": "Schinken",
+            "fr": "Jambon",
+            "ar": "لحم خنزير"
+          },
+          "c": "#f59e0b"
+        },
+        {
+          "n": {
+            "en": "Pineapple",
+            "de": "Ananas",
+            "fr": "Ananas",
+            "ar": "أناناس"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Mozzarella",
+            "de": "Mozzarella",
+            "fr": "Mozzarella",
+            "ar": "موزاريلا"
+          },
+          "c": "#FFE08A"
+        },
+        {
+          "n": {
+            "en": "Tomato Sauce",
+            "de": "Tomatensoße",
+            "fr": "Sauce tomate",
+            "ar": "صلصة طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Dough",
+            "de": "Teig",
+            "fr": "Pâte",
+            "ar": "عجينة"
+          },
+          "c": "#F4C27A"
+        }
+      ],
+      "formatted_price": "$ 28.00",
+      "image": "/mirror/the-golden-oak/images/hawaiian_supreme.png"
+    },
+    {
+      "id": "italian_supreme_pizza",
+      "category": "main_course",
+      "type": "non-veg",
+      "is_4d": true,
+      "price": 30,
+      "calories": "610",
+      "title": {
+        "en": "Italian Supreme Pizza",
+        "de": "Italienische Supreme Pizza",
+        "fr": "Pizza Italienne Suprême",
+        "ar": "بيتزا إيطالية سوبريم"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Pepperoni",
+            "de": "Pepperoni",
+            "fr": "Pepperoni",
+            "ar": "بيبروني"
+          },
+          "c": "#10b981"
+        },
+        {
+          "n": {
+            "en": "Sausage",
+            "de": "Wurst",
+            "fr": "Saucisse",
+            "ar": "سجق"
+          },
+          "c": "#ff9a76"
+        },
+        {
+          "n": {
+            "en": "Mozzarella",
+            "de": "Mozzarella",
+            "fr": "Mozzarella",
+            "ar": "موزاريلا"
+          },
+          "c": "#ffe08a"
+        },
+        {
+          "n": {
+            "en": "Bell Pepper",
+            "de": "Paprika",
+            "fr": "Poivron",
+            "ar": "فلفل"
+          },
+          "c": "#ff7a70"
+        },
+        {
+          "n": {
+            "en": "Dough",
+            "de": "Teig",
+            "fr": "Pâte",
+            "ar": "عجينة"
+          },
+          "c": "#f4c27a"
+        }
+      ],
+      "formatted_price": "$ 30.00",
+      "image": "/mirror/the-golden-oak/images/italian_supreme_pizza.png"
+    },
+    {
+      "id": "margherita_pizza",
+      "category": "main_course",
+      "price": 26,
+      "calories": "520",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Margherita Pizza",
+        "de": "Margherita Pizza",
+        "fr": "Pizza Margherita",
+        "ar": "بيتزا مارجريتا"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Mozzarella",
+            "de": "Mozzarella",
+            "fr": "Mozzarella",
+            "ar": "موزاريلا"
+          },
+          "c": "#f97316"
+        },
+        {
+          "n": {
+            "en": "Tomato Sauce",
+            "de": "Tomatensoße",
+            "fr": "Sauce tomate",
+            "ar": "صلصة طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Basil",
+            "de": "Basilikum",
+            "fr": "Basilic",
+            "ar": "ريحان"
+          },
+          "c": "#5ED18A"
+        },
+        {
+          "n": {
+            "en": "Olive Oil",
+            "de": "Olivenöl",
+            "fr": "Huile d’olive",
+            "ar": "زيت زيتون"
+          },
+          "c": "#E6C84F"
+        },
+        {
+          "n": {
+            "en": "Dough",
+            "de": "Teig",
+            "fr": "Pâte",
+            "ar": "عجينة"
+          },
+          "c": "#F4C27A"
+        }
+      ],
+      "formatted_price": "$ 26.00",
+      "image": "/mirror/the-golden-oak/images/margherita_pizza.png"
+    },
+    {
+      "id": "taco_pizza",
+      "category": "main_course",
+      "type": "non-veg",
+      "is_4d": false,
+      "price": 27.5,
+      "calories": "600",
+      "title": {
+        "en": "Taco Pizza",
+        "de": "Taco Pizza",
+        "fr": "Pizza Taco",
+        "ar": "بيتزا تاكو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Bœuf",
+            "ar": "لحم بقري"
+          },
+          "c": "#d53939"
+        },
+        {
+          "n": {
+            "en": "Cheddar",
+            "de": "Cheddar",
+            "fr": "Cheddar",
+            "ar": "شيدر"
+          },
+          "c": "#ffc233"
+        },
+        {
+          "n": {
+            "en": "Lettuce",
+            "de": "Salat",
+            "fr": "Laitue",
+            "ar": "خس"
+          },
+          "c": "#8fe3a1"
+        },
+        {
+          "n": {
+            "en": "Salsa",
+            "de": "Salsa",
+            "fr": "Salsa",
+            "ar": "صلصة"
+          },
+          "c": "#ff7a70"
+        },
+        {
+          "n": {
+            "en": "Dough",
+            "de": "Teig",
+            "fr": "Pâte",
+            "ar": "عجينة"
+          },
+          "c": "#f4c27a"
+        }
+      ],
+      "formatted_price": "$ 27.50",
+      "image": "/mirror/the-golden-oak/images/taco_pizza.png"
+    },
+    {
+      "id": "bbq_bacon_cheeseburger",
+      "category": "burgers",
+      "type": "non-veg",
+      "is_4d": false,
+      "price": 26,
+      "calories": "690",
+      "title": {
+        "en": "BBQ Bacon Cheeseburger",
+        "de": "BBQ Speck Cheeseburger",
+        "fr": "Cheeseburger au Bacon BBQ",
+        "ar": "برجر جبن بالبيكون وصلصة باربكيو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Bœuf",
+            "ar": "لحم بقري"
+          },
+          "c": "#c83c3c"
+        },
+        {
+          "n": {
+            "en": "Bacon",
+            "de": "Speck",
+            "fr": "Bacon",
+            "ar": "بيكون"
+          },
+          "c": "#ff8a7a"
+        },
+        {
+          "n": {
+            "en": "Cheddar",
+            "de": "Cheddar",
+            "fr": "Cheddar",
+            "ar": "شيدر"
+          },
+          "c": "#ffc233"
+        },
+        {
+          "n": {
+            "en": "BBQ Sauce",
+            "de": "BBQ Soße",
+            "fr": "Sauce BBQ",
+            "ar": "صلصة باربكيو"
+          },
+          "c": "#ff9e80"
+        },
+        {
+          "n": {
+            "en": "Bun",
+            "de": "Brötchen",
+            "fr": "Pain",
+            "ar": "خبز"
+          },
+          "c": "#f4c27a"
+        }
+      ],
+      "formatted_price": "$ 26.00",
+      "image": "/mirror/the-golden-oak/images/bbq_bacon_cheeseburger.png"
+    },
+    {
+      "id": "classic_oak_burger",
+      "category": "burgers",
+      "type": "non-veg",
+      "is_4d": false,
+      "price": 29,
+      "calories": "720",
+      "title": {
+        "en": "Classic Oak Burger",
+        "de": "Klassischer Eichen Burger",
+        "fr": "Burger Classique",
+        "ar": "برجر كلاسيكي"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Bœuf",
+            "ar": "لحم بقري"
+          },
+          "c": "#d13d3d"
+        },
+        {
+          "n": {
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "ar": "جبن"
+          },
+          "c": "#ffd36a"
+        },
+        {
+          "n": {
+            "en": "Onion",
+            "de": "Zwiebel",
+            "fr": "Oignon",
+            "ar": "بصل"
+          },
+          "c": "#d291ff"
+        },
+        {
+          "n": {
+            "en": "Lettuce",
+            "de": "Salat",
+            "fr": "Laitue",
+            "ar": "خس"
+          },
+          "c": "#8fe3a1"
+        },
+        {
+          "n": {
+            "en": "Bun",
+            "de": "Brötchen",
+            "fr": "Pain",
+            "ar": "خبز"
+          },
+          "c": "#f4c27a"
+        }
+      ],
+      "formatted_price": "$ 29.00",
+      "image": "/mirror/the-golden-oak/images/classic_oak_burger.png"
+    },
+    {
+      "id": "jalapeo_popper_burger",
+      "category": "burgers",
+      "price": 27.5,
+      "calories": "700",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Jalapeño Popper Burger",
+        "de": "Jalapeño Burger",
+        "fr": "Burger Jalapeño",
+        "ar": "برجر هالبينو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Bœuf",
+            "ar": "لحم بقري"
+          },
+          "c": "#7f1d1d"
+        },
+        {
+          "n": {
+            "en": "Jalapeño",
+            "de": "Jalapeño",
+            "fr": "Jalapeño",
+            "ar": "هالبينو"
+          },
+          "c": "#6EDC8F"
+        },
+        {
+          "n": {
+            "en": "Cream Cheese",
+            "de": "Frischkäse",
+            "fr": "Fromage frais",
+            "ar": "جبن كريمي"
+          },
+          "c": "#FFF1D6"
+        },
+        {
+          "n": {
+            "en": "Cheddar",
+            "de": "Cheddar",
+            "fr": "Cheddar",
+            "ar": "شيدر"
+          },
+          "c": "#FFC233"
+        },
+        {
+          "n": {
+            "en": "Bun",
+            "de": "Brötchen",
+            "fr": "Pain",
+            "ar": "خبز"
+          },
+          "c": "#F4C27A"
+        }
+      ],
+      "formatted_price": "$ 27.50",
+      "image": "/mirror/the-golden-oak/images/jalapeo_popper_burger.png"
+    },
+    {
+      "id": "oklahoma_onion_burger",
+      "category": "burgers",
+      "type": "non-veg",
+      "is_4d": false,
+      "price": 28.5,
+      "calories": "730",
+      "title": {
+        "en": "Oklahoma Onion Burger",
+        "de": "Oklahoma Zwiebel Burger",
+        "fr": "Burger Oignon",
+        "ar": "برجر بصل أوكلاهوما"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Bœuf",
+            "ar": "لحم بقري"
+          },
+          "c": "#e44e4e"
+        },
+        {
+          "n": {
+            "en": "Onion",
+            "de": "Zwiebel",
+            "fr": "Oignon",
+            "ar": "بصل"
+          },
+          "c": "#d291ff"
+        },
+        {
+          "n": {
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "ar": "جبن"
+          },
+          "c": "#ffd36a"
+        },
+        {
+          "n": {
+            "en": "Mustard",
+            "de": "Senf",
+            "fr": "Moutarde",
+            "ar": "خردل"
+          },
+          "c": "#f4d35e"
+        },
+        {
+          "n": {
+            "en": "Bun",
+            "de": "Brötchen",
+            "fr": "Pain",
+            "ar": "خبز"
+          },
+          "c": "#f4c27a"
+        }
+      ],
+      "formatted_price": "$ 28.50",
+      "image": "/mirror/the-golden-oak/images/oklahoma_onion_burger.png"
+    },
+    {
+      "id": "spicy_southwest_burger",
+      "category": "burgers",
+      "type": "non-veg",
+      "is_4d": false,
+      "price": 29,
+      "calories": "750",
+      "title": {
+        "en": "Spicy Southwest Burger",
+        "de": "Würziger Südwest Burger",
+        "fr": "Burger Sud-Ouest",
+        "ar": "برجر جنوب غربي"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Beef",
+            "de": "Rindfleisch",
+            "fr": "Bœuf",
+            "ar": "لحم بقري"
+          },
+          "c": "#d03535"
+        },
+        {
+          "n": {
+            "en": "Jalapeño",
+            "de": "Jalapeño",
+            "fr": "Jalapeño",
+            "ar": "هالبينو"
+          },
+          "c": "#6edc8f"
+        },
+        {
+          "n": {
+            "en": "Cheddar",
+            "de": "Cheddar",
+            "fr": "Cheddar",
+            "ar": "شيدر"
+          },
+          "c": "#ffc233"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#ff6f61"
+        },
+        {
+          "n": {
+            "en": "Bun",
+            "de": "Brötchen",
+            "fr": "Pain",
+            "ar": "خبز"
+          },
+          "c": "#f4c27a"
+        }
+      ],
+      "formatted_price": "$ 29.00",
+      "image": "/mirror/the-golden-oak/images/spicy_southwest_burger.png"
+    },
+    {
+      "id": "cobb_salad_perfection",
+      "category": "salads",
+      "price": 23,
+      "calories": "430",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Cobb Salad Perfection",
+        "de": "Perfekter Cobb Salat",
+        "fr": "Salade Cobb Parfaite",
+        "ar": "سلطة كوب المثالية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chicken",
+            "de": "Hähnchen",
+            "fr": "Poulet",
+            "ar": "دجاج"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Avocado",
+            "de": "Avocado",
+            "fr": "Avocat",
+            "ar": "أفوكادو"
+          },
+          "c": "#8FE3A1"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Egg",
+            "de": "Ei",
+            "fr": "Œuf",
+            "ar": "بيض"
+          },
+          "c": "#FFF4CC"
+        },
+        {
+          "n": {
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "ar": "جبن"
+          },
+          "c": "#FFD36A"
+        }
+      ],
+      "formatted_price": "$ 23.00",
+      "image": "/mirror/the-golden-oak/images/cobb_salad_perfection.png"
+    },
+    {
+      "id": "colorful_cobb_salad",
+      "category": "salads",
+      "price": 24,
+      "calories": "450",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Colorful Cobb Salad",
+        "de": "Bunter Cobb Salat",
+        "fr": "Salade Cobb Colorée",
+        "ar": "سلطة كوب الملونة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chicken",
+            "de": "Hähnchen",
+            "fr": "Poulet",
+            "ar": "دجاج"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Corn",
+            "de": "Mais",
+            "fr": "Maïs",
+            "ar": "ذرة"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Cabbage",
+            "de": "Kohl",
+            "fr": "Chou",
+            "ar": "ملفوف"
+          },
+          "c": "#D291FF"
+        },
+        {
+          "n": {
+            "en": "Avocado",
+            "de": "Avocado",
+            "fr": "Avocat",
+            "ar": "أفوكادو"
+          },
+          "c": "#8FE3A1"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#FF6F61"
+        }
+      ],
+      "formatted_price": "$ 24.00",
+      "image": "/mirror/the-golden-oak/images/colorful_cobb_salad.png"
+    },
+    {
+      "id": "grilled_chicken_salad",
+      "category": "salads",
+      "type": "non-veg",
+      "is_4d": true,
+      "price": 25,
+      "calories": "380",
+      "title": {
+        "en": "Grilled Chicken Salad",
+        "de": "Hähnchensalat",
+        "fr": "Salade de Poulet",
+        "ar": "سلطة دجاج"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chicken",
+            "de": "Hähnchen",
+            "fr": "Poulet",
+            "ar": "دجاج"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Lettuce",
+            "de": "Salat",
+            "fr": "Laitue",
+            "ar": "خس"
+          },
+          "c": "#8fe3a1"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#ff6f61"
+        },
+        {
+          "n": {
+            "en": "Cucumber",
+            "de": "Gurke",
+            "fr": "Concombre",
+            "ar": "خيار"
+          },
+          "c": "#7ee4b5"
+        },
+        {
+          "n": {
+            "en": "Dressing",
+            "de": "Dressing",
+            "fr": "Sauce",
+            "ar": "صلصة"
+          },
+          "c": "#ffe08a"
+        }
+      ],
+      "formatted_price": "$ 25.00",
+      "image": "/mirror/the-golden-oak/images/grilled_chicken_salad.png"
+    },
+    {
+      "id": "mediterranean_salad",
+      "category": "salads",
+      "price": 24.5,
+      "calories": "360",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Mediterranean Salad",
+        "de": "Mediterraner Salat",
+        "fr": "Salade Méditerranéenne",
+        "ar": "سلطة متوسطية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Cucumber",
+            "de": "Gurke",
+            "fr": "Concombre",
+            "ar": "خيار"
+          },
+          "c": "#06b6d4"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Olive",
+            "de": "Olive",
+            "fr": "Olive",
+            "ar": "زيتون"
+          },
+          "c": "#C2A36B"
+        },
+        {
+          "n": {
+            "en": "Feta",
+            "de": "Feta",
+            "fr": "Feta",
+            "ar": "فيتا"
+          },
+          "c": "#FFF4E0"
+        },
+        {
+          "n": {
+            "en": "Olive Oil",
+            "de": "Olivenöl",
+            "fr": "Huile d’olive",
+            "ar": "زيت زيتون"
+          },
+          "c": "#E6C84F"
+        }
+      ],
+      "formatted_price": "$ 24.50",
+      "image": "/mirror/the-golden-oak/images/mediterranean_salad.png"
+    },
+    {
+      "id": "seafood_salad_with_grilled_shrimp",
+      "category": "salads",
+      "price": 31,
+      "calories": "410",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Seafood Salad With Grilled Shrimp",
+        "de": "Meeresfrüchtesalat mit Garnelen",
+        "fr": "Salade de Fruits de Mer aux Crevettes",
+        "ar": "سلطة مأكولات بحرية مع روبيان"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Shrimp",
+            "de": "Garnele",
+            "fr": "Crevette",
+            "ar": "روبيان"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Lettuce",
+            "de": "Salat",
+            "fr": "Laitue",
+            "ar": "خس"
+          },
+          "c": "#8FE3A1"
+        },
+        {
+          "n": {
+            "en": "Avocado",
+            "de": "Avocado",
+            "fr": "Avocat",
+            "ar": "أفوكادو"
+          },
+          "c": "#8FE3A1"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Lemon",
+            "de": "Zitrone",
+            "fr": "Citron",
+            "ar": "ليمون"
+          },
+          "c": "#FFE066"
+        }
+      ],
+      "formatted_price": "$ 31.00",
+      "image": "/mirror/the-golden-oak/images/seafood_salad_with_grilled_shrimp.png"
+    },
+    {
+      "id": "southwestern_chicken_salad",
+      "category": "salads",
+      "price": 26.5,
+      "calories": "440",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Southwestern Chicken Salad",
+        "de": "Südwestlicher Hähnchensalat",
+        "fr": "Salade Poulet Sud-Ouest",
+        "ar": "سلطة دجاج جنوب غربية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chicken",
+            "de": "Hähnchen",
+            "fr": "Poulet",
+            "ar": "دجاج"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Beans",
+            "de": "Bohnen",
+            "fr": "Haricots",
+            "ar": "فاصوليا"
+          },
+          "c": "#D6A77A"
+        },
+        {
+          "n": {
+            "en": "Corn",
+            "de": "Mais",
+            "fr": "Maïs",
+            "ar": "ذرة"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Pepper",
+            "de": "Paprika",
+            "fr": "Poivron",
+            "ar": "فلفل"
+          },
+          "c": "#FF7A70"
+        },
+        {
+          "n": {
+            "en": "Dressing",
+            "de": "Dressing",
+            "fr": "Sauce",
+            "ar": "صلصة"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 26.50",
+      "image": "/mirror/the-golden-oak/images/southwestern_chicken_salad.png"
+    },
+    {
+      "id": "berry_bliss_cake",
+      "category": "desserts",
+      "type": "veg",
+      "is_4d": false,
+      "price": 22,
+      "calories": "390",
+      "title": {
+        "en": "Berry Bliss Cake",
+        "de": "Beerenkuchen",
+        "fr": "Gâteau aux Baies",
+        "ar": "كعكة التوت"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Berries",
+            "de": "Beeren",
+            "fr": "Baies",
+            "ar": "توت"
+          },
+          "c": "#3b82f6"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#fff1d6"
+        },
+        {
+          "n": {
+            "en": "Sponge",
+            "de": "Biskuit",
+            "fr": "Génoise",
+            "ar": "كيك"
+          },
+          "c": "#f6d365"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#ffe08a"
+        },
+        {
+          "n": {
+            "en": "Butter",
+            "de": "Butter",
+            "fr": "Beurre",
+            "ar": "زبدة"
+          },
+          "c": "#ffd36a"
+        }
+      ],
+      "formatted_price": "$ 22.00",
+      "image": "/mirror/the-golden-oak/images/berry_bliss_cake.png"
+    },
+    {
+      "id": "choco_nut_cake",
+      "category": "desserts",
+      "type": "veg",
+      "is_4d": false,
+      "price": 24,
+      "calories": "460",
+      "title": {
+        "en": "Choco Nut Cake",
+        "de": "Schoko Nuss Kuchen",
+        "fr": "Gâteau Chocolat Noisette",
+        "ar": "كعكة شوكولاتة بالبندق"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chocolate",
+            "de": "Schokolade",
+            "fr": "Chocolat",
+            "ar": "شوكولاتة"
+          },
+          "c": "#ac5f53"
+        },
+        {
+          "n": {
+            "en": "Nuts",
+            "de": "Nüsse",
+            "fr": "Noix",
+            "ar": "مكسرات"
+          },
+          "c": "#d9a15c"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#fff1d6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#ffe08a"
+        },
+        {
+          "n": {
+            "en": "Butter",
+            "de": "Butter",
+            "fr": "Beurre",
+            "ar": "زبدة"
+          },
+          "c": "#ffd36a"
+        }
+      ],
+      "formatted_price": "$ 24.00",
+      "image": "/mirror/the-golden-oak/images/choco_nut_cake.png"
+    },
+    {
+      "id": "mandm_chocolate_cake",
+      "category": "desserts",
+      "type": "veg",
+      "is_4d": false,
+      "price": 23.5,
+      "calories": "480",
+      "title": {
+        "en": "M&M Chocolate Cake",
+        "de": "M&M Schokoladenkuchen",
+        "fr": "Gâteau Chocolat M&M",
+        "ar": "كعكة شوكولاتة إم آند إم"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Chocolate",
+            "de": "Schokolade",
+            "fr": "Chocolat",
+            "ar": "شوكولاتة"
+          },
+          "c": "#975c53"
+        },
+        {
+          "n": {
+            "en": "Candy",
+            "de": "Süßigkeiten",
+            "fr": "Bonbon",
+            "ar": "حلوى"
+          },
+          "c": "#ff6f61"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#fff1d6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#ffe08a"
+        },
+        {
+          "n": {
+            "en": "Butter",
+            "de": "Butter",
+            "fr": "Beurre",
+            "ar": "زبدة"
+          },
+          "c": "#ffd36a"
+        }
+      ],
+      "formatted_price": "$ 23.50",
+      "image": "/mirror/the-golden-oak/images/mandm_chocolate_cake.png"
+    },
+    {
+      "id": "strawberry_cheese_cake",
+      "category": "desserts",
+      "price": 24,
+      "calories": "420",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Strawberry Cheese Cake",
+        "de": "Erdbeer Käsekuchen",
+        "fr": "Cheesecake à la Fraise",
+        "ar": "تشيزكيك بالفراولة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Cheese",
+            "de": "Käse",
+            "fr": "Fromage",
+            "ar": "جبن"
+          },
+          "c": "#fcd34d"
+        },
+        {
+          "n": {
+            "en": "Strawberry",
+            "de": "Erdbeere",
+            "fr": "Fraise",
+            "ar": "فراولة"
+          },
+          "c": "#FF6F91"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#FFF1D6"
+        },
+        {
+          "n": {
+            "en": "Biscuit",
+            "de": "Keks",
+            "fr": "Biscuit",
+            "ar": "بسكويت"
+          },
+          "c": "#F4C27A"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 24.00",
+      "image": "/mirror/the-golden-oak/images/strawberry_cheese_cake.png"
+    },
+    {
+      "id": "tropical_sunshine_delight",
+      "category": "desserts",
+      "price": 22.5,
+      "calories": "360",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Tropical Sunshine Delight",
+        "de": "Tropischer Genuss",
+        "fr": "Délice Tropical",
+        "ar": "حلوى استوائية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Mango",
+            "de": "Mango",
+            "fr": "Mangue",
+            "ar": "مانجو"
+          },
+          "c": "#ef4444"
+        },
+        {
+          "n": {
+            "en": "Pineapple",
+            "de": "Ananas",
+            "fr": "Ananas",
+            "ar": "أناناس"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Coconut",
+            "de": "Kokos",
+            "fr": "Noix de coco",
+            "ar": "جوز الهند"
+          },
+          "c": "#FFF4E0"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#FFF1D6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 22.50",
+      "image": "/mirror/the-golden-oak/images/tropical_sunshine_delight.png"
+    },
+    {
+      "id": "boil_feast_cajun_flair",
+      "category": "seafood",
+      "price": 52,
+      "calories": "880",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Boil Feast Cajun Flair",
+        "de": "Cajun Meeresfrüchte Fest",
+        "fr": "Festin Cajun Fruits de Mer",
+        "ar": "وليمة مأكولات بحرية كاجون"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Shrimp",
+            "de": "Garnele",
+            "fr": "Crevette",
+            "ar": "روبيان"
+          },
+          "c": "#ef4444"
+        },
+        {
+          "n": {
+            "en": "Crab",
+            "de": "Krabbe",
+            "fr": "Crabe",
+            "ar": "سلطعون"
+          },
+          "c": "#FF8A7A"
+        },
+        {
+          "n": {
+            "en": "Mussels",
+            "de": "Muscheln",
+            "fr": "Moules",
+            "ar": "بلح البحر"
+          },
+          "c": "#9BB6C9"
+        },
+        {
+          "n": {
+            "en": "Corn",
+            "de": "Mais",
+            "fr": "Maïs",
+            "ar": "ذرة"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Sauce",
+            "de": "Soße",
+            "fr": "Sauce",
+            "ar": "صلصة"
+          },
+          "c": "#FF9E80"
+        }
+      ],
+      "formatted_price": "$ 52.00",
+      "image": "/mirror/the-golden-oak/images/boil_feast_cajun_flair.png"
+    },
+    {
+      "id": "fish_tacos",
+      "category": "seafood",
+      "price": 34,
+      "calories": "520",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Fish Tacos",
+        "de": "Fisch Tacos",
+        "fr": "Tacos au Poisson",
+        "ar": "تاكو السمك"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Fish",
+            "de": "Fisch",
+            "fr": "Poisson",
+            "ar": "سمك"
+          },
+          "c": "#3b82f6"
+        },
+        {
+          "n": {
+            "en": "Tortilla",
+            "de": "Tortilla",
+            "fr": "Tortilla",
+            "ar": "تورتيلا"
+          },
+          "c": "#F4C27A"
+        },
+        {
+          "n": {
+            "en": "Cabbage",
+            "de": "Kohl",
+            "fr": "Chou",
+            "ar": "ملفوف"
+          },
+          "c": "#D291FF"
+        },
+        {
+          "n": {
+            "en": "Lime",
+            "de": "Limette",
+            "fr": "Citron vert",
+            "ar": "ليمون"
+          },
+          "c": "#FFE066"
+        },
+        {
+          "n": {
+            "en": "Sauce",
+            "de": "Soße",
+            "fr": "Sauce",
+            "ar": "صلصة"
+          },
+          "c": "#FF9E80"
+        }
+      ],
+      "formatted_price": "$ 34.00",
+      "image": "/mirror/the-golden-oak/images/fish_tacos.png"
+    },
+    {
+      "id": "seafood_cioppino",
+      "category": "seafood",
+      "price": 56,
+      "calories": "640",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Seafood Cioppino",
+        "de": "Meeresfrüchte Cioppino",
+        "fr": "Cioppino Fruits de Mer",
+        "ar": "تشيوبينو بالمأكولات البحرية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Fish",
+            "de": "Fisch",
+            "fr": "Poisson",
+            "ar": "سمك"
+          },
+          "c": "#a3e635"
+        },
+        {
+          "n": {
+            "en": "Shrimp",
+            "de": "Garnele",
+            "fr": "Crevette",
+            "ar": "روبيان"
+          },
+          "c": "#FF8A7A"
+        },
+        {
+          "n": {
+            "en": "Mussels",
+            "de": "Muscheln",
+            "fr": "Moules",
+            "ar": "بلح البحر"
+          },
+          "c": "#9BB6C9"
+        },
+        {
+          "n": {
+            "en": "Tomato",
+            "de": "Tomate",
+            "fr": "Tomate",
+            "ar": "طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Garlic",
+            "de": "Knoblauch",
+            "fr": "Ail",
+            "ar": "ثوم"
+          },
+          "c": "#FFF4CC"
+        }
+      ],
+      "formatted_price": "$ 56.00",
+      "image": "/mirror/the-golden-oak/images/seafood_cioppino.png"
+    },
+    {
+      "id": "seafood_paella",
+      "category": "seafood",
+      "price": 60,
+      "calories": "780",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Seafood Paella",
+        "de": "Meeresfrüchte Paella",
+        "fr": "Paella Fruits de Mer",
+        "ar": "باييلا بالمأكولات البحرية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Rice",
+            "de": "Reis",
+            "fr": "Riz",
+            "ar": "أرز"
+          },
+          "c": "#ffffff"
+        },
+        {
+          "n": {
+            "en": "Shrimp",
+            "de": "Garnele",
+            "fr": "Crevette",
+            "ar": "روبيان"
+          },
+          "c": "#FF8A7A"
+        },
+        {
+          "n": {
+            "en": "Mussels",
+            "de": "Muscheln",
+            "fr": "Moules",
+            "ar": "بلح البحر"
+          },
+          "c": "#9BB6C9"
+        },
+        {
+          "n": {
+            "en": "Peas",
+            "de": "Erbsen",
+            "fr": "Pois",
+            "ar": "بازلاء"
+          },
+          "c": "#7EE4B5"
+        },
+        {
+          "n": {
+            "en": "Saffron",
+            "de": "Safran",
+            "fr": "Safran",
+            "ar": "زعفران"
+          },
+          "c": "#FFD966"
+        }
+      ],
+      "formatted_price": "$ 60.00",
+      "image": "/mirror/the-golden-oak/images/seafood_paella.png"
+    },
+    {
+      "id": "seafood_pasta",
+      "category": "seafood",
+      "price": 48,
+      "calories": "710",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Seafood Pasta",
+        "de": "Meeresfrüchte Pasta",
+        "fr": "Pâtes Fruits de Mer",
+        "ar": "باستا بالمأكولات البحرية"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Pasta",
+            "de": "Pasta",
+            "fr": "Pâtes",
+            "ar": "باستا"
+          },
+          "c": "#a3e635"
+        },
+        {
+          "n": {
+            "en": "Shrimp",
+            "de": "Garnele",
+            "fr": "Crevette",
+            "ar": "روبيان"
+          },
+          "c": "#FF8A7A"
+        },
+        {
+          "n": {
+            "en": "Squid",
+            "de": "Tintenfisch",
+            "fr": "Calmar",
+            "ar": "حبار"
+          },
+          "c": "#E6F2F2"
+        },
+        {
+          "n": {
+            "en": "Tomato Sauce",
+            "de": "Tomatensoße",
+            "fr": "Sauce tomate",
+            "ar": "صلصة طماطم"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Parsley",
+            "de": "Petersilie",
+            "fr": "Persil",
+            "ar": "بقدونس"
+          },
+          "c": "#5FD08C"
+        }
+      ],
+      "formatted_price": "$ 48.00",
+      "image": "/mirror/the-golden-oak/images/seafood_pasta.png"
+    },
+    {
+      "id": "sushi_assortment",
+      "category": "seafood",
+      "price": 62,
+      "calories": "540",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Sushi Assortment",
+        "de": "Sushi Auswahl",
+        "fr": "Assortiment de Sushi",
+        "ar": "تشكيلة سوشي"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Rice",
+            "de": "Reis",
+            "fr": "Riz",
+            "ar": "أرز"
+          },
+          "c": "#ffffff"
+        },
+        {
+          "n": {
+            "en": "Salmon",
+            "de": "Lachs",
+            "fr": "Saumon",
+            "ar": "سلمون"
+          },
+          "c": "#FFA07A"
+        },
+        {
+          "n": {
+            "en": "Tuna",
+            "de": "Thunfisch",
+            "fr": "Thon",
+            "ar": "تونة"
+          },
+          "c": "#FF6F61"
+        },
+        {
+          "n": {
+            "en": "Seaweed",
+            "de": "Algen",
+            "fr": "Algues",
+            "ar": "أعشاب بحرية"
+          },
+          "c": "#6EDC8F"
+        },
+        {
+          "n": {
+            "en": "Wasabi",
+            "de": "Wasabi",
+            "fr": "Wasabi",
+            "ar": "واسابي"
+          },
+          "c": "#8FE3A1"
+        }
+      ],
+      "formatted_price": "$ 62.00",
+      "image": "/mirror/the-golden-oak/images/sushi_assortment.png"
+    },
+    {
+      "id": "cappuccino",
+      "category": "coffee",
+      "price": 18,
+      "calories": "150",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Cappuccino",
+        "de": "Cappuccino",
+        "fr": "Cappuccino",
+        "ar": "كابتشينو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Espresso",
+            "de": "Espresso",
+            "fr": "Espresso",
+            "ar": "إسبريسو"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#F3E5D8"
+        },
+        {
+          "n": {
+            "en": "Milk Foam",
+            "de": "Milchschaum",
+            "fr": "Mousse de lait",
+            "ar": "رغوة حليب"
+          },
+          "c": "#FFF4E6"
+        },
+        {
+          "n": {
+            "en": "Cocoa",
+            "de": "Kakao",
+            "fr": "Cacao",
+            "ar": "كاكاو"
+          },
+          "c": "#E6B8A2"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 18.00",
+      "image": "/mirror/the-golden-oak/images/cappuccino.png"
+    },
+    {
+      "id": "caramel_macchiato",
+      "category": "coffee",
+      "price": 20,
+      "calories": "220",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Caramel Macchiato",
+        "de": "Karamell Macchiato",
+        "fr": "Macchiato au Caramel",
+        "ar": "كراميل ماكياتو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Espresso",
+            "de": "Espresso",
+            "fr": "Espresso",
+            "ar": "إسبريسو"
+          },
+          "c": "#3b82f6"
+        },
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#F3E5D8"
+        },
+        {
+          "n": {
+            "en": "Caramel",
+            "de": "Karamell",
+            "fr": "Caramel",
+            "ar": "كراميل"
+          },
+          "c": "#FFB070"
+        },
+        {
+          "n": {
+            "en": "Milk Foam",
+            "de": "Milchschaum",
+            "fr": "Mousse de lait",
+            "ar": "رغوة حليب"
+          },
+          "c": "#FFF4E6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 20.00",
+      "image": "/mirror/the-golden-oak/images/caramel_macchiato.png"
+    },
+    {
+      "id": "iced_coffee_whipped_cream",
+      "category": "coffee",
+      "type": "veg",
+      "is_4d": false,
+      "price": 21,
+      "calories": "260",
+      "title": {
+        "en": "Iced Coffee Whipped Cream",
+        "de": "Eiskaffee mit Sahne",
+        "fr": "Café Glacé à la Crème",
+        "ar": "قهوة مثلجة بالكريمة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Coffee",
+            "de": "Kaffee",
+            "fr": "Café",
+            "ar": "قهوة"
+          },
+          "c": "#9b4f27"
+        },
+        {
+          "n": {
+            "en": "Ice",
+            "de": "Eis",
+            "fr": "Glace",
+            "ar": "ثلج"
+          },
+          "c": "#dff6ff"
+        },
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#f3e5d8"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#fff1d6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#ffe08a"
+        }
+      ],
+      "formatted_price": "$ 21.00",
+      "image": "/mirror/the-golden-oak/images/iced_coffee_whipped_cream.png"
+    },
+    {
+      "id": "latte_art_blend",
+      "category": "coffee",
+      "price": 19.5,
+      "calories": "190",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Latte Art Blend",
+        "de": "Latte Art Mischung",
+        "fr": "Mélange Latte Art",
+        "ar": "مزيج لاتيه آرت"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Espresso",
+            "de": "Espresso",
+            "fr": "Espresso",
+            "ar": "إسبريسو"
+          },
+          "c": "#fbbf24"
+        },
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#F3E5D8"
+        },
+        {
+          "n": {
+            "en": "Milk Foam",
+            "de": "Milchschaum",
+            "fr": "Mousse de lait",
+            "ar": "رغوة حليب"
+          },
+          "c": "#FFF4E6"
+        },
+        {
+          "n": {
+            "en": "Vanilla",
+            "de": "Vanille",
+            "fr": "Vanille",
+            "ar": "فانيليا"
+          },
+          "c": "#FFE6A3"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 19.50",
+      "image": "/mirror/the-golden-oak/images/latte_art_blend.png"
+    },
+    {
+      "id": "caramel_macchiato",
+      "category": "beverages",
+      "price": 20,
+      "calories": "220",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Caramel Macchiato",
+        "de": "Karamell Macchiato",
+        "fr": "Macchiato au Caramel",
+        "ar": "كراميل ماكياتو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Espresso",
+            "de": "Espresso",
+            "fr": "Espresso",
+            "ar": "إسبريسو"
+          },
+          "c": "#84cc16"
+        },
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#F3E5D8"
+        },
+        {
+          "n": {
+            "en": "Caramel",
+            "de": "Karamell",
+            "fr": "Caramel",
+            "ar": "كراميل"
+          },
+          "c": "#FFB070"
+        },
+        {
+          "n": {
+            "en": "Milk Foam",
+            "de": "Milchschaum",
+            "fr": "Mousse de lait",
+            "ar": "رغوة حليب"
+          },
+          "c": "#FFF4E6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 20.00",
+      "image": "/mirror/the-golden-oak/images/caramel_macchiato.png"
+    },
+    {
+      "id": "chocolate_milkshake",
+      "category": "beverages",
+      "price": 24,
+      "calories": "420",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Chocolate Milkshake",
+        "de": "Schokoladen Milchshake",
+        "fr": "Milkshake au Chocolat",
+        "ar": "ميلك شيك شوكولاتة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#ffffff"
+        },
+        {
+          "n": {
+            "en": "Chocolate",
+            "de": "Schokolade",
+            "fr": "Chocolat",
+            "ar": "شوكولاتة"
+          },
+          "c": "#FF8C6A"
+        },
+        {
+          "n": {
+            "en": "Ice Cream",
+            "de": "Eiscreme",
+            "fr": "Glace",
+            "ar": "آيس كريم"
+          },
+          "c": "#FFF4E0"
+        },
+        {
+          "n": {
+            "en": "Cream",
+            "de": "Sahne",
+            "fr": "Crème",
+            "ar": "كريمة"
+          },
+          "c": "#FFF1D6"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        }
+      ],
+      "formatted_price": "$ 24.00",
+      "image": "/mirror/the-golden-oak/images/chocolate_milkshake.png"
+    },
+    {
+      "id": "colorful_bubble_tea_delight",
+      "category": "beverages",
+      "price": 23,
+      "calories": "330",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Colorful Bubble Tea Delight",
+        "de": "Bunter Bubble Tea",
+        "fr": "Bubble Tea Coloré",
+        "ar": "بابل تي ملون"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Tea",
+            "de": "Tee",
+            "fr": "Thé",
+            "ar": "شاي"
+          },
+          "c": "#10b981"
+        },
+        {
+          "n": {
+            "en": "Tapioca",
+            "de": "Tapioka",
+            "fr": "Tapioca",
+            "ar": "تابيوكا"
+          },
+          "c": "#CFA6FF"
+        },
+        {
+          "n": {
+            "en": "Milk",
+            "de": "Milch",
+            "fr": "Lait",
+            "ar": "حليب"
+          },
+          "c": "#F3E5D8"
+        },
+        {
+          "n": {
+            "en": "Syrup",
+            "de": "Sirup",
+            "fr": "Sirop",
+            "ar": "شراب"
+          },
+          "c": "#FF8A80"
+        },
+        {
+          "n": {
+            "en": "Ice",
+            "de": "Eis",
+            "fr": "Glace",
+            "ar": "ثلج"
+          },
+          "c": "#DFF6FF"
+        }
+      ],
+      "formatted_price": "$ 23.00",
+      "image": "/mirror/the-golden-oak/images/colorful_bubble_tea_delight.png"
+    },
+    {
+      "id": "mango_smoothie",
+      "category": "beverages",
+      "price": 22,
+      "calories": "280",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Mango Smoothie",
+        "de": "Mango Smoothie",
+        "fr": "Smoothie à la Mangue",
+        "ar": "سموثي مانجو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Mango",
+            "de": "Mango",
+            "fr": "Mangue",
+            "ar": "مانجو"
+          },
+          "c": "#d946ef"
+        },
+        {
+          "n": {
+            "en": "Yogurt",
+            "de": "Joghurt",
+            "fr": "Yaourt",
+            "ar": "زبادي"
+          },
+          "c": "#FFF4E0"
+        },
+        {
+          "n": {
+            "en": "Honey",
+            "de": "Honig",
+            "fr": "Miel",
+            "ar": "عسل"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Ice",
+            "de": "Eis",
+            "fr": "Glace",
+            "ar": "ثلج"
+          },
+          "c": "#DFF6FF"
+        },
+        {
+          "n": {
+            "en": "Mint",
+            "de": "Minze",
+            "fr": "Menthe",
+            "ar": "نعناع"
+          },
+          "c": "#6EDC8F"
+        }
+      ],
+      "formatted_price": "$ 22.00",
+      "image": "/mirror/the-golden-oak/images/mango_smoothie.png"
+    },
+    {
+      "id": "rainbow_smoothie",
+      "category": "beverages",
+      "price": 25,
+      "calories": "350",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Rainbow Smoothie",
+        "de": "Regenbogen Smoothie",
+        "fr": "Smoothie Arc-en-ciel",
+        "ar": "سموثي قوس قزح"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Strawberry",
+            "de": "Erdbeere",
+            "fr": "Fraise",
+            "ar": "فراولة"
+          },
+          "c": "#f43f5e"
+        },
+        {
+          "n": {
+            "en": "Mango",
+            "de": "Mango",
+            "fr": "Mangue",
+            "ar": "مانجو"
+          },
+          "c": "#FFD966"
+        },
+        {
+          "n": {
+            "en": "Blueberry",
+            "de": "Heidelbeere",
+            "fr": "Myrtille",
+            "ar": "توت أزرق"
+          },
+          "c": "#8FA8FF"
+        },
+        {
+          "n": {
+            "en": "Banana",
+            "de": "Banane",
+            "fr": "Banane",
+            "ar": "موز"
+          },
+          "c": "#FFE08A"
+        },
+        {
+          "n": {
+            "en": "Yogurt",
+            "de": "Joghurt",
+            "fr": "Yaourt",
+            "ar": "زبادي"
+          },
+          "c": "#FFF4E0"
+        }
+      ],
+      "formatted_price": "$ 25.00",
+      "image": "/mirror/the-golden-oak/images/rainbow_smoothie.png"
+    },
+    {
+      "id": "refreshing_mojito",
+      "category": "beverages",
+      "price": 26,
+      "calories": "190",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Refreshing Mojito",
+        "de": "Mojito",
+        "fr": "Mojito",
+        "ar": "موهيتو"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Lime",
+            "de": "Limette",
+            "fr": "Citron vert",
+            "ar": "ليمون"
+          },
+          "c": "#06b6d4"
+        },
+        {
+          "n": {
+            "en": "Mint",
+            "de": "Minze",
+            "fr": "Menthe",
+            "ar": "نعناع"
+          },
+          "c": "#6EDC8F"
+        },
+        {
+          "n": {
+            "en": "Soda",
+            "de": "Soda",
+            "fr": "Soda",
+            "ar": "صودا"
+          },
+          "c": "#E6FAFF"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        },
+        {
+          "n": {
+            "en": "Ice",
+            "de": "Eis",
+            "fr": "Glace",
+            "ar": "ثلج"
+          },
+          "c": "#DFF6FF"
+        }
+      ],
+      "formatted_price": "$ 26.00",
+      "image": "/mirror/the-golden-oak/images/refreshing_mojito.png"
+    },
+    {
+      "id": "strawberry_lemonade_mint",
+      "category": "beverages",
+      "price": 24,
+      "calories": "210",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Strawberry Lemonade Mint",
+        "de": "Erdbeer Zitronen Limonade",
+        "fr": "Limonade Fraise Citron",
+        "ar": "ليمونادة بالفراولة"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Strawberry",
+            "de": "Erdbeere",
+            "fr": "Fraise",
+            "ar": "فراولة"
+          },
+          "c": "#f43f5e"
+        },
+        {
+          "n": {
+            "en": "Lemon",
+            "de": "Zitrone",
+            "fr": "Citron",
+            "ar": "ليمون"
+          },
+          "c": "#FFE066"
+        },
+        {
+          "n": {
+            "en": "Mint",
+            "de": "Minze",
+            "fr": "Menthe",
+            "ar": "نعناع"
+          },
+          "c": "#6EDC8F"
+        },
+        {
+          "n": {
+            "en": "Sugar",
+            "de": "Zucker",
+            "fr": "Sucre",
+            "ar": "سكر"
+          },
+          "c": "#FFE08A"
+        },
+        {
+          "n": {
+            "en": "Ice",
+            "de": "Eis",
+            "fr": "Glace",
+            "ar": "ثلج"
+          },
+          "c": "#DFF6FF"
+        }
+      ],
+      "formatted_price": "$ 24.00",
+      "image": "/mirror/the-golden-oak/images/strawberry_lemonade_mint.png"
+    },
+    {
+      "id": "bavarian_classic_german_dish",
+      "category": "chef_specials",
+      "price": 48,
+      "calories": "720",
+      "type": "non-veg",
+      "is_4d": false,
+      "title": {
+        "en": "Bavarian Classic German Dish",
+        "de": "Bayerisches Klassisches Gericht",
+        "fr": "Plat Classique Bavarois",
+        "ar": "طبق بافاري كلاسيكي"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Pork",
+            "de": "Schwein",
+            "fr": "Porc",
+            "ar": "لحم خنزير"
+          },
+          "c": "#ef4444"
+        },
+        {
+          "n": {
+            "en": "Mustard",
+            "de": "Senf",
+            "fr": "Moutarde",
+            "ar": "خردل"
+          },
+          "c": "#F4D35E"
+        },
+        {
+          "n": {
+            "en": "Cabbage",
+            "de": "Kohl",
+            "fr": "Chou",
+            "ar": "ملفوف"
+          },
+          "c": "#D291FF"
+        },
+        {
+          "n": {
+            "en": "Potato",
+            "de": "Kartoffel",
+            "fr": "Pomme de terre",
+            "ar": "بطاطس"
+          },
+          "c": "#F6D365"
+        },
+        {
+          "n": {
+            "en": "Parsley",
+            "de": "Petersilie",
+            "fr": "Persil",
+            "ar": "بقدونس"
+          },
+          "c": "#5FD08C"
+        }
+      ],
+      "formatted_price": "$ 48.00",
+      "image": "/mirror/the-golden-oak/images/bavarian_classic_german_dish.png"
+    },
+    {
+      "id": "palak_paneer_and_garlic_naan",
+      "category": "chef_specials",
+      "price": 32,
+      "calories": "650",
+      "type": "veg",
+      "is_4d": false,
+      "title": {
+        "en": "Palak Paneer & Garlic Naan",
+        "de": "Palak Paneer mit Knoblauch Naan",
+        "fr": "Palak Paneer et Naan à l’Ail",
+        "ar": "بالاك بانير مع خبز نان بالثوم"
+      },
+      "ingredients": [
+        {
+          "n": {
+            "en": "Spinach",
+            "de": "Spinat",
+            "fr": "Épinard",
+            "ar": "سبانخ"
+          },
+          "c": "#16a34a"
+        },
+        {
+          "n": {
+            "en": "Paneer",
+            "de": "Paneer",
+            "fr": "Paneer",
+            "ar": "بانير"
+          },
+          "c": "#FFF4E0"
+        },
+        {
+          "n": {
+            "en": "Naan",
+            "de": "Naan",
+            "fr": "Naan",
+            "ar": "نان"
+          },
+          "c": "#F4C27A"
+        },
+        {
+          "n": {
+            "en": "Garlic",
+            "de": "Knoblauch",
+            "fr": "Ail",
+            "ar": "ثوم"
+          },
+          "c": "#FFF4CC"
+        },
+        {
+          "n": {
+            "en": "Ghee",
+            "de": "Ghee",
+            "fr": "Ghee",
+            "ar": "سمن"
+          },
+          "c": "#FFD966"
+        }
+      ],
+      "formatted_price": "$ 32.00",
+      "image": "/mirror/the-golden-oak/images/palak_paneer_and_garlic_naan.png"
+    }
+  ]
+}

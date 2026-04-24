@@ -1,0 +1,17 @@
+
+> ai-website-clone-template@0.3.1 dev
+> next dev --port 3003
+
+▲ Next.js 16.2.1 (Turbopack)
+- Local:         http://localhost:3003
+- Network:       http://192.168.1.4:3003
+✓ Ready in 994ms
+
+ HEAD / 200 in 709ms (next.js: 478ms, application-code: 232ms)
+ GET / 200 in 88ms (next.js: 14ms, application-code: 74ms)
+ GET /appview?cat=breakfast&id=scrambled_egg 404 in 2.1s (next.js: 1954ms, application-code: 167ms)
+ GET /appview?cat=breakfast&id=scrambled_egg 404 in 87ms (next.js: 20ms, application-code: 67ms)
+ GET /appview?cat=breakfast&id=scrambled_egg 404 in 123ms (next.js: 14ms, application-code: 109ms)
+ HEAD /appview?cat=breakfast&id=boiled_egg 404 in 203ms (next.js: 77ms, application-code: 126ms)
+ HEAD /appview 404 in 104ms (next.js: 23ms, application-code: 80ms)
+[?25h

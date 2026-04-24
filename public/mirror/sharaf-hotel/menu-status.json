@@ -1,0 +1,67 @@
+{
+  "sharaf_special_omelet": {
+    "badges": [
+      "NEW"
+    ],
+    "stock": "few"
+  },
+  "sharaf_breakfast": {
+    "badges": [
+      "SPECIAL"
+    ],
+    "offer": 10
+  },
+  "full_hanid": {
+    "badges": [
+      "SPECIAL"
+    ],
+    "stock": "few"
+  },
+  "roasted_full_chicken": {
+    "badges": [
+      "SPECIAL"
+    ]
+  },
+  "fish_goulash": {
+    "stock": "out"
+  },
+  "sharaf_special_club_sandwich": {
+    "badges": [
+      "SPICY1"
+    ]
+  },
+  "sharaf_special_burger": {
+    "badges": [
+      "SPECIAL"
+    ],
+    "offer": 15
+  },
+  "sharaf_special_pizza": {
+    "badges": [
+      "SPECIAL"
+    ],
+    "offer": 10
+  },
+  "strawberry_cake": {
+    "badges": [
+      "NEW"
+    ]
+  },
+  "special_tea": {
+    "badges": [
+      "HOT"
+    ]
+  },
+  "special_sharaf_juice": {
+    "badges": [
+      "COLD",
+      "SPECIAL"
+    ]
+  },
+  "classic_mojito": {
+    "badges": [
+      "COLD"
+    ],
+    "stock": "few"
+  }
+}
