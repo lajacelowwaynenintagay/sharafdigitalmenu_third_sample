@@ -577,8 +577,6 @@ export function SmartMenuPage() {
           className={`items-container ${slideAnim} ${layout === "gallery" ? "gallery-mode" : ""}`} 
           id="item-list"
           key={`${currentCategory}-${slideAnim}-${layout}`}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
         >
           {!menuData && !error ? (
             <>
