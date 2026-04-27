@@ -856,6 +856,19 @@ html[data-theme="light"] .hero-bg-image {
   white-space: normal;
 }
 
+.dish-desc {
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: normal;
+}
+
 .gallery-mode .dish-name,
 .gallery-mode .dish-cal,
 .gallery-mode .badge-wrapper {
@@ -1509,5 +1522,21 @@ html[data-theme="light"] .hero-bg-image {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+.cart-toast-notification {
+  position: fixed;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #facc15;
+  color: #000;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 14px;
+  z-index: 9999;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  animation: fadeIn 0.2s ease;
 }
 

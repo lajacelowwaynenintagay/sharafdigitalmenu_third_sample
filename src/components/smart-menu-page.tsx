@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import {
   BRAND_NAME,
@@ -100,6 +101,7 @@ export function SmartMenuPage() {
   const [currentCategory, setCurrentCategory] = useState<string | null>(null);
   const [searchText, setSearchText] = useState("");
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartLoaded, setCartLoaded] = useState(false);
   const [chefOpen, setChefOpen] = useState(false);
   const [cartOpen, setCartOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
@@ -109,6 +111,10 @@ export function SmartMenuPage() {
   const [liveStatus, setLiveStatus] = useState<MenuStatusMap>({});
   const [touchStart, setTouchStart] = useState<{ x: number; y: number } | null>(null);
   const [slideAnim, setSlideAnim] = useState("reveal");
+
+  const isInitialCartMount = useRef(true);
+  const searchParams = useSearchParams();
+  const router = useRouter();
 
   useEffect(() => {
     let cancelled = false;
@@ -160,10 +166,22 @@ export function SmartMenuPage() {
       // Always default to light mode on refresh
       setTheme("light");
       setCart(loadCart());
+      setCartLoaded(true);
     }, 0);
 
     return () => window.clearTimeout(timer);
   }, []);
+
+  // ── Detect ?openCart=1 and open the cart panel ────────────────────────────
+  // Runs whenever URL changes. Cart is already correctly populated via lazy init.
+  useEffect(() => {
+    if (searchParams.get("openCart") === "1") {
+      // Re-sync cart in case items were added from the item detail page
+      setCart(loadCart());
+      setCartOpen(true);
+      router.replace("/", { scroll: false });
+    }
+  }, [searchParams, router]);
 
   useEffect(() => {
     fetchMenuStatus()
@@ -217,9 +235,36 @@ export function SmartMenuPage() {
     safeStorageSet(STORAGE_KEYS.layout, layout);
   }, [layout]);
 
+  // ── Cart persistence ─────────────────────────────────────────────────────
+  // Save whenever cart changes, but ONLY after initial load is complete
   useEffect(() => {
+    if (!cartLoaded) return;
     saveCart(cart);
-  }, [cart]);
+  }, [cart, cartLoaded]);
+
+  // Re-sync cart from localStorage when user navigates back from the item detail page
+  useEffect(() => {
+    const syncCart = () => {
+      setCart(loadCart());
+    };
+    // Listen for when this tab becomes visible again (user navigated back)
+    document.addEventListener("visibilitychange", syncCart);
+    // Also listen for focus (covers browser back button on mobile)
+    window.addEventListener("focus", syncCart);
+    // Listen for browser back/forward navigation
+    window.addEventListener("popstate", syncCart);
+    // Listen for storage changes (from other components writing to localStorage)
+    window.addEventListener("storage", syncCart);
+    // Also sync on route changes within the SPA (periodic check)
+    const interval = window.setInterval(syncCart, 1000);
+    return () => {
+      document.removeEventListener("visibilitychange", syncCart);
+      window.removeEventListener("focus", syncCart);
+      window.removeEventListener("popstate", syncCart);
+      window.removeEventListener("storage", syncCart);
+      window.clearInterval(interval);
+    };
+  }, []);
 
   useEffect(() => {
     if (!toastVisible) return;
@@ -436,7 +481,7 @@ export function SmartMenuPage() {
             <i className={`fas ${theme === "dark" ? "fa-moon" : "fa-sun"}`} id="themeIcon" />
           </button>
 {/* Language option removed as requested */}
-          <button type="button" className="nav-btn" id="cart-btn" onClick={() => setCartOpen(true)}>
+          <button type="button" className="nav-btn" id="cart-btn" onClick={() => { setCart(loadCart()); setCartOpen(true); }}>
             <i className="fas fa-shopping-bag" />
             <div id="cartBadge" className={`cart-badge ${cartCount ? "" : "hidden"}`}>
               {cartCount}
@@ -562,10 +607,6 @@ export function SmartMenuPage() {
               ? `${String(item.calories).toLowerCase().replace(/k?cal(ories)?/g, "").trim()} Calories`
               : null;
             const resolvedPrice = getResolvedPrice(item, status);
-            const hasOffer = typeof status.offer === "number" && status.offer > 0;
-            const offeredPrice = hasOffer
-              ? resolvedPrice - resolvedPrice * ((status.offer ?? 0) / 100)
-              : resolvedPrice;
             const displayPrice = formatMoney(resolvedPrice, currency);
             const dietIcon = item.type === "veg" ? "fa-leaf" : "fa-drumstick-bite";
             const dietColor = item.type === "veg" ? "#4ade80" : "#ef4444";
@@ -628,14 +669,7 @@ export function SmartMenuPage() {
                   </div>
                   {/* Ingredients are only shown in the detailed item view now */}
                   <div className="dish-price">
-                    {hasOffer ? (
-                      <>
-                        <span className="old-price">{formatMoney(resolvedPrice, currency)}</span>
-                        {formatMoney(offeredPrice, currency)}
-                      </>
-                    ) : (
-                      displayPrice
-                    )}
+                    {displayPrice}
                   </div>
                 </div>
 

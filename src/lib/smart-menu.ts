@@ -5,6 +5,7 @@ import type {
   MenuLanguage,
   MenuStatusMap,
 } from "@/types/menu";
+import { ITEM_DESCRIPTIONS } from "@/lib/item-descriptions";
 
 export const RESTAURANT_SLUG = "sharaf-hotel";
 export const BRAND_NAME = "Sharaf Hotel";
@@ -199,10 +200,19 @@ export async function fetchMenuData(): Promise<MenuData> {
     const data = await fetchSanity<MenuData>(query);
     
     // Parse ingredients from JSON string back to array if needed
-    data.items = data.items.map(item => ({
-      ...item,
-      ingredients: typeof item.ingredients === 'string' ? JSON.parse(item.ingredients) : item.ingredients
-    }));
+    // and merge in local descriptions when Sanity doesn't have one
+    data.items = data.items.map(item => {
+      const localDesc = ITEM_DESCRIPTIONS[item.id];
+      const sanityDesc = item.description?.en;
+      return {
+        ...item,
+        ingredients: typeof item.ingredients === 'string' ? JSON.parse(item.ingredients) : item.ingredients,
+        description: {
+          ...item.description,
+          en: sanityDesc || localDesc || "",
+        },
+      };
+    });
 
     if (data.categories[0]?.id !== "all") {
       data.categories.unshift({
@@ -253,11 +263,12 @@ export async function fetchMenuStatus(): Promise<MenuStatusMap> {
   }
 }
 
-export function getLocalizedText<T extends Partial<Record<MenuLanguage, string>> & { en: string }>(
-  value: T,
+export function getLocalizedText<T extends Partial<Record<MenuLanguage, string | null>>>(
+  value: T | undefined | null,
   lang: MenuLanguage,
 ): string {
-  return value[lang] ?? value.en;
+  if (!value) return "";
+  return value[lang] ?? value.en ?? "";
 }
 
 export function getDishImageUrl(item: MenuItem): string {
