@@ -183,11 +183,11 @@ export async function fetchMenuData(): Promise<MenuData> {
       "default_language": "en",
       "theme_auto": false
     },
-    "categories": *[_type == "category" && id in ["desserts-delights", "hot-beverages", "iced-beverages"]] | order(order asc) {
+    "categories": *[_type == "category"] | order(order asc) {
       id, icon, 
       "name": { "en": name_en, "ar": name_ar, "fr": name_fr, "de": name_de }
     },
-    "items": *[_type == "menuItem" && category in ["desserts-delights", "hot-beverages", "iced-beverages"]] {
+    "items": *[_type == "menuItem"] {
       id, category, subgroup, price, price_label, calories, type, is_4d,
       "title": { "en": title_en, "ar": title_ar, "fr": title_fr, "de": title_de },
       "description": { "en": description_en },
