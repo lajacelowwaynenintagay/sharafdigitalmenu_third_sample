@@ -1,7 +1,10 @@
-"use client";
-
+import { Suspense } from "react";
 import { SmartMenuPage } from "@/components/smart-menu-page";
 
 export default function Home() {
-  return <SmartMenuPage />;
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SmartMenuPage />
+    </Suspense>
+  );
 }
