@@ -36,10 +36,18 @@ export type MenuItem = {
   image?: string;
 };
 
+export type AllSection = {
+  label: string;
+  matchField: "category" | "subgroup";
+  matchValue: string;
+  order: number;
+};
+
 export type MenuData = {
   settings: MenuSettings;
   categories: MenuCategory[];
   items: MenuItem[];
+  allSections?: AllSection[];
 };
 
 export type MenuStatusEntry = {

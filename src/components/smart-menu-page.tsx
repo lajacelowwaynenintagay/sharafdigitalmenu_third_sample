@@ -278,6 +278,8 @@ export function SmartMenuPage() {
     if (!menuData) return [];
     return filterMenuItems({
       items: menuData.items,
+      categories: menuData.categories,
+      allSections: menuData.allSections,
       categoryId: currentCategory,
       searchText,
       filter,

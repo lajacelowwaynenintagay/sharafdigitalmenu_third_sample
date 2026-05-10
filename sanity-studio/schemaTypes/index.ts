@@ -158,4 +158,66 @@ const menuItemSchema = {
   }
 };
 
-export const schemaTypes = [categorySchema, menuItemSchema];
+const allSectionSchema = {
+  name: 'allSection',
+  title: 'All Section',
+  type: 'document',
+  fields: [
+    {
+      name: 'label',
+      title: 'Section Heading',
+      type: 'string',
+      description: 'The heading text shown in the "All" view (e.g. "Breakfast", "Classic Cakes")',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'matchField',
+      title: 'Match By',
+      type: 'string',
+      description: '"category" = match items by their Category ID. "subgroup" = match items by their Subgroup name.',
+      options: {
+        list: [
+          { title: 'Category ID', value: 'category' },
+          { title: 'Subgroup Name', value: 'subgroup' },
+        ],
+      },
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'matchValue',
+      title: 'Match Value',
+      type: 'string',
+      description: 'The Category ID (e.g. "breakfast-delights") or Subgroup name (e.g. "Classic Cakes") to match items against.',
+      validation: (Rule: any) => Rule.required(),
+    },
+    {
+      name: 'order',
+      title: 'Sort Order',
+      type: 'number',
+      description: 'Controls the position of this section in the "All" view. Lower numbers appear first.',
+      validation: (Rule: any) => Rule.required(),
+    },
+  ],
+  preview: {
+    select: {
+      title: 'label',
+      subtitle: 'matchValue',
+      order: 'order',
+    },
+    prepare({ title, subtitle, order }: { title: string; subtitle: string; order: number }) {
+      return {
+        title: `${order}. ${title}`,
+        subtitle: `→ ${subtitle}`,
+      };
+    },
+  },
+  orderings: [
+    {
+      title: 'Sort Order',
+      name: 'orderAsc',
+      by: [{ field: 'order', direction: 'asc' }],
+    },
+  ],
+};
+
+export const schemaTypes = [categorySchema, menuItemSchema, allSectionSchema];

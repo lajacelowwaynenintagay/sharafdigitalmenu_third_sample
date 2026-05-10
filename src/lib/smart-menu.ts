@@ -1,11 +1,11 @@
 import type {
+  AllSection,
   MenuCategory,
   MenuData,
   MenuItem,
   MenuLanguage,
   MenuStatusMap,
 } from "@/types/menu";
-import { ITEM_DESCRIPTIONS } from "@/lib/item-descriptions";
 
 export const RESTAURANT_SLUG = "sharaf-hotel";
 export const BRAND_NAME = "Sharaf Hotel";
@@ -159,61 +159,17 @@ export const UI_COPY: Record<
   },
 };
 
-const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'lno8raw1';
-const SANITY_DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
-
 let cachedMenuData: MenuData | null = null;
 let cachedMenuStatus: MenuStatusMap | null = null;
-
-async function fetchSanity<T>(query: string): Promise<T> {
-  const url = `https://${SANITY_PROJECT_ID}.api.sanity.io/v2022-03-07/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`;
-  const res = await fetch(url, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Sanity API error: ${res.status}`);
-  const json = await res.json();
-  return json.result as T;
-}
 
 export async function fetchMenuData(): Promise<MenuData> {
   if (cachedMenuData) return cachedMenuData;
 
-  const query = `{
-    "settings": {
-      "restaurant_name": "Sharaf Hotel",
-      "currency": "ETB",
-      "default_language": "en",
-      "theme_auto": false
-    },
-    "categories": *[_type == "category"] | order(order asc) {
-      id, icon, 
-      "name": { "en": name_en, "ar": name_ar, "fr": name_fr, "de": name_de }
-    },
-    "items": *[_type == "menuItem"] {
-      id, category, subgroup, price, price_label, calories, type, is_4d,
-      "title": { "en": title_en, "ar": title_ar, "fr": title_fr, "de": title_de },
-      "description": { "en": description_en },
-      ingredients, stock, offer, badges,
-      "image": image.asset->url
-    }
-  }`;
-
   try {
-    const data = await fetchSanity<MenuData>(query);
-    
-    // Parse ingredients from JSON string back to array if needed
-    // and merge in local descriptions when Sanity doesn't have one
-    data.items = data.items.map(item => {
-      const localDesc = ITEM_DESCRIPTIONS[item.id];
-      const sanityDesc = item.description?.en;
-      return {
-        ...item,
-        ingredients: typeof item.ingredients === 'string' ? JSON.parse(item.ingredients) : item.ingredients,
-        description: {
-          ...item.description,
-          en: sanityDesc || localDesc || "",
-        },
-      };
-    });
+    const response = await fetch(`${LOCAL_MIRROR_BASE}/menu-data.json`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Menu data error: ${response.status}`);
 
+    const data = (await response.json()) as MenuData;
     if (data.categories[0]?.id !== "all") {
       data.categories.unshift({
         id: "all",
@@ -221,45 +177,27 @@ export async function fetchMenuData(): Promise<MenuData> {
         icon: "fa-list",
       });
     }
-    
     cachedMenuData = data;
     return data;
   } catch (e) {
-    console.error('Failed to load from Sanity, falling back to local JSON.', e);
-    // Fallback to local JSON if Sanity fails
-    const localResponse = await fetch(`${LOCAL_MIRROR_BASE}/menu-data.json`, { cache: "no-store" });
-    const data = (await localResponse.json()) as MenuData;
-    if (data.categories[0]?.id !== "all") {
-      data.categories.unshift({
-        id: "all",
-        name: { en: "All", de: "Alle", fr: "Tout", ar: "الكل" },
-        icon: "fa-list",
-      });
-    }
-    return data;
+    console.error("Failed to load menu data.", e);
+    throw e;
   }
 }
 
 export async function fetchMenuStatus(): Promise<MenuStatusMap> {
   if (cachedMenuStatus) return cachedMenuStatus;
 
-  // Sanity now holds the status directly on the menu items!
-  const query = `*[_type == "menuItem"] { id, stock, offer, badges }`;
   try {
-    const items = await fetchSanity<any[]>(query);
-    const statusMap: MenuStatusMap = {};
-    for (const item of items) {
-      statusMap[item.id] = {
-        stock: item.stock,
-        offer: item.offer,
-        badges: item.badges
-      };
-    }
+    const response = await fetch(`${LOCAL_MIRROR_BASE}/menu-status.json`, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Menu status error: ${response.status}`);
+
+    const statusMap = (await response.json()) as MenuStatusMap;
     cachedMenuStatus = statusMap;
     return statusMap;
   } catch (e) {
-    const res = await fetch(`${LOCAL_MIRROR_BASE}/menu-status.json`, { cache: "no-store" });
-    return res.json();
+    console.error("Failed to load menu status.", e);
+    throw e;
   }
 }
 
@@ -326,18 +264,44 @@ export function getCategoryTitle(
 
 export function filterMenuItems(params: {
   items: MenuItem[];
+  categories: MenuCategory[];
+  allSections?: AllSection[];
   categoryId: string | null;
   searchText: string;
   filter: "all" | "veg" | "non-veg" | "drinks" | "fast-food";
   lang: MenuLanguage;
 }): MenuItem[] {
-  const { items, categoryId, searchText, filter, lang } = params;
+  const { items, categories, allSections, categoryId, searchText, filter, lang } = params;
   const normalizedSearch = searchText.trim().toLowerCase();
 
   const DRINKS_CATEGORIES = ["hot-beverages", "iced-beverages"];
   const FASTFOOD_CATEGORIES = ["quick-bites"];
-  const DRINKS_KEYWORDS = ["beverage", "drink", "coffee", "tea", "juice", "soda", "smoothie", "water", "latte", "cappuccino", "espresso", "iced"];
-  const FASTFOOD_KEYWORDS = ["quick", "burger", "fast", "snack", "fries", "wrap", "sandwich", "pizza", "bite", "nugget"];
+  const DRINKS_KEYWORDS = [
+    "beverage",
+    "drink",
+    "coffee",
+    "tea",
+    "juice",
+    "soda",
+    "smoothie",
+    "water",
+    "latte",
+    "cappuccino",
+    "espresso",
+    "iced",
+  ];
+  const FASTFOOD_KEYWORDS = [
+    "quick",
+    "burger",
+    "fast",
+    "snack",
+    "fries",
+    "wrap",
+    "sandwich",
+    "pizza",
+    "bite",
+    "nugget",
+  ];
 
   const isDrinksItem = (item: MenuItem) => {
     if (DRINKS_CATEGORIES.includes(item.category)) return true;
@@ -355,64 +319,98 @@ export function filterMenuItems(params: {
 
   const filtered = items.filter((item) => {
     const isAll = categoryId === "all";
-    const inCategory = normalizedSearch ? true : (categoryId && !isAll) ? item.category === categoryId : true;
+    const inCategory = normalizedSearch ? true : categoryId && !isAll ? item.category === categoryId : true;
+
     let filterMatch = true;
     if (filter === "veg") filterMatch = item.type === "veg";
     else if (filter === "non-veg") filterMatch = item.type === "non-veg";
     else if (filter === "drinks") filterMatch = isDrinksItem(item);
     else if (filter === "fast-food") filterMatch = isFastFoodItem(item);
+
     const titleMatch = normalizedSearch
       ? getLocalizedText(item.title, lang).toLowerCase().includes(normalizedSearch) ||
         item.title.en.toLowerCase().includes(normalizedSearch)
       : true;
+
     return inCategory && filterMatch && titleMatch;
   });
 
-  // When viewing "All" category (not searching), reorder by priority subgroups
   const isAllView = categoryId === "all" && !normalizedSearch;
-  if (isAllView) {
-    const PRIORITY_SUBGROUPS = [
-      "Breakfast",
-      "House Specialties",
-      "Sea Foods Specials",
-      "Pastas & Penne",
-      "Indian Corner",
-      "Ethiopian Cuisine",
-      "Fresh Salads",
-      "Warm Soups",
-      "Sandwiches",
-      "Arab Corner",
-      "Somali Classics",
-      "Kids Menu",
-      "Bites and Starters",
-      "Burgers",
-      "Pizza Corner",
-      "Classic Cakes",
-      "Rich & Decadent Cake",
-      "Pastries & Rolls",
-      "Fruity & Flavored Cakes",
-      "Traditional & Signature Treats",
-      "Classic Teas",
-      "Coffee Favorites",
-      "Milk Based Options",
-      "Iced Delights",
-      "Juice Corner",
-      "Creamy Milkshakes",
-      "Mojito"
-    ];
+  if (isAllView && allSections && allSections.length > 0) {
+    // ── Sanity-driven "All" view ordering ──────────────────────────────
+    // Each allSection document defines a heading + how to match items.
+    // Build a lookup: for each item, find its section order.
 
-    const getSubgroupPriority = (item: MenuItem): number => {
-      const sg = item.subgroup ?? "";
-      const idx = PRIORITY_SUBGROUPS.indexOf(sg);
-      return idx !== -1 ? idx : PRIORITY_SUBGROUPS.length;
+    // Map: matchKey → { order, label }
+    const sectionByCategory = new Map<string, { order: number; label: string }>();
+    const sectionBySubgroup = new Map<string, { order: number; label: string }>();
+
+    for (const sec of allSections) {
+      const entry = { order: sec.order, label: sec.label };
+      if (sec.matchField === "category") {
+        sectionByCategory.set(sec.matchValue, entry);
+      } else {
+        sectionBySubgroup.set(sec.matchValue, entry);
+      }
+    }
+
+    const getSection = (item: MenuItem): { order: number; label: string } => {
+      // First try matching by subgroup (more specific)
+      if (item.subgroup) {
+        const bySub = sectionBySubgroup.get(item.subgroup);
+        if (bySub) return bySub;
+      }
+      // Then try matching by category
+      const byCat = sectionByCategory.get(item.category);
+      if (byCat) return byCat;
+      // Fallback: use category name from categories array
+      const cat = categories.find((c) => c.id === item.category);
+      const fallbackLabel = cat ? getLocalizedText(cat.name, "en") : item.category;
+      return { order: 9999, label: fallbackLabel };
     };
 
+    // Track original positions for stable sort within the same section
+    const originalIndex = new Map<MenuItem, number>();
+    filtered.forEach((item, idx) => originalIndex.set(item, idx));
+
+    // Assign the section label as the item's subgroup so headings render
+    for (const item of filtered) {
+      const sec = getSection(item);
+      (item as any).__allSectionOrder = sec.order;
+      (item as any).subgroup = sec.label;
+    }
+
     filtered.sort((a, b) => {
-      const pa = getSubgroupPriority(a);
-      const pb = getSubgroupPriority(b);
-      if (pa !== pb) return pa - pb;
-      // Within the same priority group, keep original order
-      return 0;
+      const orderA = (a as any).__allSectionOrder ?? 9999;
+      const orderB = (b as any).__allSectionOrder ?? 9999;
+      if (orderA !== orderB) return orderA - orderB;
+      return (originalIndex.get(a) ?? 0) - (originalIndex.get(b) ?? 0);
+    });
+  } else if (isAllView) {
+    // Fallback when no allSections exist: sort by category tab order
+    const categoryOrder = new Map<string, number>();
+    categories.forEach((cat, idx) => {
+      if (cat.id !== "all") categoryOrder.set(cat.id, idx);
+    });
+
+    // Assign category name as subgroup for headings
+    for (const item of filtered) {
+      if (!item.subgroup) {
+        const cat = categories.find((c) => c.id === item.category);
+        if (cat) {
+          (item as any).subgroup = getLocalizedText(cat.name, "en");
+        }
+      }
+    }
+
+    const originalIndex = new Map<MenuItem, number>();
+    filtered.forEach((item, idx) => originalIndex.set(item, idx));
+
+    filtered.sort((a, b) => {
+      const catA = categoryOrder.get(a.category) ?? 999;
+      const catB = categoryOrder.get(b.category) ?? 999;
+      if (catA !== catB) return catA - catB;
+      return (originalIndex.get(a) ?? 0) - (originalIndex.get(b) ?? 0);
     });
   }
 
