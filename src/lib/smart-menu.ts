@@ -166,7 +166,7 @@ export async function fetchMenuData(): Promise<MenuData> {
   if (cachedMenuData) return cachedMenuData;
 
   try {
-    const response = await fetch(`${LOCAL_MIRROR_BASE}/menu-data.json`, { cache: "no-store" });
+    const response = await fetch("/api/menu-data", { cache: "no-store" });
     if (!response.ok) throw new Error(`Menu data error: ${response.status}`);
 
     const data = (await response.json()) as MenuData;
@@ -189,7 +189,7 @@ export async function fetchMenuStatus(): Promise<MenuStatusMap> {
   if (cachedMenuStatus) return cachedMenuStatus;
 
   try {
-    const response = await fetch(`${LOCAL_MIRROR_BASE}/menu-status.json`, { cache: "no-store" });
+    const response = await fetch("/api/menu-status", { cache: "no-store" });
     if (!response.ok) throw new Error(`Menu status error: ${response.status}`);
 
     const statusMap = (await response.json()) as MenuStatusMap;
